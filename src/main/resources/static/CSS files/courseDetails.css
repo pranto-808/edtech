@@ -1,0 +1,311 @@
+/*Course title and description box*/
+/* Container for course header with background image */
+.course-header {
+    background-image: url('src/main/resources/static/Courses/Academic/course title bg design.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    filter: brightness(0.7); /* Dim effect */
+}
+
+/* Title container styling */
+.course-title-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Course title style */
+.course-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF33CC; /* Match color from image */
+    margin: 0;
+}
+
+/* Student count styling */
+.student-count {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* Description box styling */
+.course-description-container {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title of the description */
+.description-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Actual description text */
+.course-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Course teacher's information (section1) */
+
+.teacher-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.teacher-profile {
+    display: flex;
+    align-items: flex-start;
+}
+
+.teacher-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+.teacher-info h4 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.teacher-role {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
+}
+
+.teacher-description {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Course details section (section2) */
+
+.section-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.requirement-list li {
+    font-size: 1rem;
+    color: #333;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.requirement-list li::before {
+    content: "✔";
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Course details section (section3) */
+.payment-info {
+    font-size: 1rem;
+    color: #333;
+}
+
+.payment-info a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.payment-info a:hover {
+    text-decoration: underline;
+}
+
+/* Class Routine section */
+
+.class-routine-section {
+    padding: 2rem 0;
+}
+
+.class-routine-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4c4c4c;
+}
+
+.download-btn {
+    background-color: #e1ebff;
+    color: #4c4c4c;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #cfd8f5;
+}
+
+.routine-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-info-box {
+    background-color: #f5fbff;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4c4c4c;
+}
+
+.contact-info-box p {
+    font-size: 1rem;
+    color: #6c6c6c;
+}
+
+.contact-info-box strong {
+    color: #fdbf47;
+}
+
+.call-btn {
+    background-color: #4d8fff;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.call-btn i {
+    margin-right: 8px;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+
+/* learn-anywhere-section */
+
+.learn-anywhere-section {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+.learn-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e2d39;
+    text-align: left;
+    margin: 0;
+    padding-right: 1rem;
+    border-right: 3px solid #6a0dad;
+    display: inline-block;
+}
+
+.learn-description {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.app-store-badge {
+    width: 150px;
+    height: auto;
+}
+
+.app-link {
+    display: inline-block;
+}
+
+
+/* Sticky box styling for the right section */
+.sticky-box {
+    position: sticky;
+    top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section, .instructors {
+    margin-top: 20px;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-section ul li {
+    margin-bottom: 10px;
+}
+
+h2, h3, h4, h5 {
+    color: #343a40;
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS files/style_carousel.css"> <!-- Link to the custom CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyNest - Home</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="bg-white shadow sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="text-primary font-weight-bold"><a href="/home" class="text-decoration-none text-primary">StudyNest</a></h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
+                    <li class="nav-item"><a href="/courses" class="nav-link text-dark">Courses</a></li>
+                    <li class="nav-item"><a href="/aboutus" class="nav-link text-dark">About Us</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link text-dark">Contact</a></li>
+                    <li class="nav-item"><a href="/login" class="btn btn-outline-primary">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="display-4 font-weight-bold">Master <span class="text-primary">Your Skill</span> Shape Your Future.</h2>
+                <p class="lead">You do not have to be great to start. But you have to start to be great.</p>
+                <a href="/courses" class="btn btn-primary btn-lg">Browse Courses</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="/homePageImage.png" alt="Person with laptop" class="img-fluid" style="max-width: 80%;">
+            </div>
+        </div>
+    </section>
+     <!-- Horizontal Scrolling Carousel Section -->
+     <section class="carousel-section py-5">
+        <div class="carousel-container">
+            <div class="scroll">
+                <!-- Original set of images -->
+                <div class="carousel-item">
+                    <img src="TheCarousel/ui_ux_design.webp" alt="UI/UX Design">
+                    <div class="carousel-caption">UI/UX Design</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/productivity.webp" alt="Productivity">
+                    <div class="carousel-caption">Productivity</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/photography.webp" alt="Photography">
+                    <div class="carousel-caption">Photography</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/fine_art.webp" alt="Fine Art">
+                    <div class="carousel-caption">Fine Art</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/marketing.webp" alt="Marketing">
+                    <div class="carousel-caption">Marketing</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/graphic_design.webp" alt="Graphic Designing">
+                    <div class="carousel-caption">Graphic Designing</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/illustration.webp" alt="Illustrator">
+                    <div class="carousel-caption">Illustrator</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/animation.webp" alt="Animation">
+                    <div class="carousel-caption">Animation</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/film_video.webp" alt="Film & Video">
+                    <div class="carousel-caption">Film & Video</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/freelance.webp" alt="Freelancing">
+                    <div class="carousel-caption">Freelancing</div>
+                </div>
+    
+                <!-- Duplicate set of images for seamless looping -->
+                <div class="carousel-item">
+                    <img src="TheCarousel/ui_ux_design.webp" alt="UI/UX Design">
+                    <div class="carousel-caption">UI/UX Design</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/productivity.webp" alt="Productivity">
+                    <div class="carousel-caption">Productivity</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/photography.webp" alt="Photography">
+                    <div class="carousel-caption">Photography</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/fine_art.webp" alt="Fine Art">
+                    <div class="carousel-caption">Fine Art</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/marketing.webp" alt="Marketing">
+                    <div class="carousel-caption">Marketing</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/graphic_design.webp" alt="Graphic Designing">
+                    <div class="carousel-caption">Graphic Designing</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/illustration.webp" alt="Illustrator">
+                    <div class="carousel-caption">Illustrator</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/animation.webp" alt="Animation">
+                    <div class="carousel-caption">Animation</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/film_video.webp" alt="Film & Video">
+                    <div class="carousel-caption">Film & Video</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="TheCarousel/freelance.webp" alt="Freelancing">
+                    <div class="carousel-caption">Freelancing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- JavaScript for Play/Pause -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        const scrollContainer = document.querySelector('.scroll');
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+
+        let isPlaying = true;
+
+        playButton.addEventListener('click', () => {
+            if (!isPlaying) {
+                scrollContainer.style.animationPlayState = 'running';
+                isPlaying = true;
+            }
+        });
+
+        pauseButton.addEventListener('click', () => {
+            if (isPlaying) {
+                scrollContainer.style.animationPlayState = 'paused';
+                isPlaying = false;
+            }
+        });
+
+        // Start the scroll automatically
+        scrollContainer.style.animationPlayState = 'running';
+    </script>
+
+<section class="features-section py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Feature 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body">
+                        <div class="feature-icon mb-3">
+                            <img src="UnderTheCarousel/feature-icon1.png" alt="Learn from Experts" class="img-fluid" style="width: 60px;">
+                        </div>
+                        <h5 class="card-title text-warning">Learn From Experts</h5>
+                        <p class="card-text">Provides access to knowledge and insights directly from top professionals in various fields.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body">
+                        <div class="feature-icon mb-3">
+                            <img src="UnderTheCarousel/feature-icon2.png" alt="Earn a Certificate" class="img-fluid" style="width: 60px;">
+                        </div>
+                        <h5 class="card-title text-warning">Earn a Certificate</h5>
+                        <p class="card-text">Allows learners to obtain official recognition of their knowledge upon successfully completing a course.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body">
+                        <div class="feature-icon mb-3">
+                            <img src="UnderTheCarousel/feature-icon3.png" alt="1+ Courses" class="img-fluid" style="width: 60px;">
+                        </div>
+                        <h5 class="card-title text-warning">1+ Courses</h5>
+                        <p class="card-text">Provides access to a variety of courses to enhance your learning, enrich your knowledge and skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Secondary and Higher Education Section -->
+
+<section class="program-section py-5">
+    <div class="container text-center">
+        <!-- Section Title and Subtitle -->
+        <h2 class="section-title">High School and Higher Secondary Education and Exam Preparation Program</h2>
+        <p class="section-subtitle">Complete program for online classes, live classes, class notes, animated videos, and A+ preparation across the country!</p>
+        
+        <!-- Cards Section -->
+        <div class="row justify-content-center mt-4">
+            <!-- Card 1 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="program-card bg-gradient-purple">
+                    <img src="/Courses/Academic/admission.jpg" alt="Admission Icon" class="program-icon">
+                    <p class="program-text">Admission</p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="program-card bg-gradient-red">
+                    <img src="/Courses/Academic/hsc.webp" alt="HSC Icon" class="program-icon">
+                    <p class="program-text">HSC</p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="program-card bg-gradient-purple">
+                    <img src="/Courses/Academic/ssc.jpg" alt="SSC Icon" class="program-icon">
+                    <p class="program-text">SSC</p>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="program-card bg-gradient-blue">
+                    <img src="/Courses/Academic/class9.webp" alt="Class 9 Icon" class="program-icon">
+                    <p class="program-text">Class 9 (New Curriculum)</p>
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>
+
+
+
+<!--Skill Development Courses -->
+
+<section class="skill-development-section py-5">
+    <div class="container text-center">
+        <!-- Section Title and Subtitle -->
+        <h2 class="section-title">Skill Development Courses</h2>
+        <p class="section-subtitle">Explore our range of courses to enhance your skills in the most in-demand fields of technology.</p>
+        
+        <!-- Cards Section -->
+        <div class="row justify-content-center mt-4">
+            <!-- Card 1 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="skill-card bg-gradient-purple">
+                    <img src="/Courses/Skills/DSA.jpg" alt="Data Structures Icon" class="skill-icon">
+                    <p class="skill-text">Data Structures & Algorithm</p>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="skill-card bg-gradient-red">
+                    <img src="/Courses/Skills/python.jpg" alt="Python Icon" class="skill-icon">
+                    <p class="skill-text">Python</p>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="skill-card bg-gradient-blue">
+                    <img src="/Courses/Skills/ML.jpg" alt="Machine Learning Icon" class="skill-icon">
+                    <p class="skill-text">Machine Learning</p>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="skill-card bg-gradient-green">
+                    <img src="/Courses/Skills/Cyber-Security.jpg" alt="Cyber Security Icon" class="skill-icon">
+                    <p class="skill-text">Cyber Security</p>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="col-md-2 col-sm-4 mb-4">
+                <div class="skill-card bg-gradient-orange">
+                    <img src="/path/to/networking-icon.png" alt="Networking Icon" class="skill-icon">
+                    <p class="skill-text">Networking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials and comments Section -->
+
+<section class="testimonial-section py-5">
+    <div class="container">
+        <!-- Header Section -->
+        <h2 class="text-white font-weight-bold mb-3">Why Join StudyNest?</h2>
+        <p class="text-white mb-4">
+            The best center with modern technology serving students across the country, helping them in preparation and study with over 100,000 students impacted!
+        </p>
+
+        <!-- Feature Boxes -->
+        <div class="row mb-5">
+            <div class="col-md-3 mb-3">
+                <div class="feature-box">
+                    <span>💎</span>
+                    <p>Quality Content</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="feature-box">
+                    <span>⭐</span>
+                    <p>Easy Study Materials</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="feature-box">
+                    <span>📚</span>
+                    <p>All in One Place</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="feature-box">
+                    <span>🍎</span>
+                    <p>Seamless Learning</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial Section -->
+        <div class="testimonial-box d-flex align-items-center">
+            <div class="testimonial-quote">
+                <span class="quote-icon">“</span>
+                <p class="quote-text">"The online classes have made it so much easier to understand concepts. It’s been very beneficial for me!"</p>
+                <p class="quote-author">Jane Doe</p>
+                <p class="author-info">Grade 10 Student, Central High School</p>
+            </div>
+            <div class="testimonial-image">
+                <img src="/path/to/student-image.jpg" alt="Student Image">
+            </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="dots-container text-center mt-4">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+
+
+<!-- Team Section and FAQ -->
+
+<section class="team-section py-5 text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Section -->
+            <div class="col-md-6">
+                <h2 class="section-title">Skillshare for Teams</h2>
+                <p>Set your team up for success with reimagined learning to empower their personal and professional growth.</p>
+                <p>With inspiring classes on soft skills, business essentials, well-being, and more, your whole team will have deep knowledge and expertise at their fingertips.</p>
+                <button class="btn btn-outline-light mt-3">Learn More</button>
+            </div>
+            
+            <!-- Image Section -->
+            <div class="col-md-6 text-center">
+                <img src="/teamwork.jpg" alt="Team Learning" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5 text-white">
+    <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <div class="faq-item mt-4">
+            <div class="faq-question">What is Skillshare?</div>
+            <div class="faq-answer">Skillshare is an online learning platform with thousands of classes on various topics to help people build skills.</div>
+        </div>
+        <div class="faq-item mt-4">
+            <div class="faq-question">What is included in my Skillshare membership?</div>
+            <div class="faq-answer">A Skillshare membership gives you unlimited access to classes on various subjects including design, business, and more.</div>
+        </div>
+        <div class="faq-item mt-4">
+            <div class="faq-question">What can I learn from Skillshare?</div>
+            <div class="faq-answer">Skillshare offers classes in creative fields like illustration, photography, and writing, as well as business and lifestyle skills.</div>
+        </div>
+        <div class="faq-item mt-4">
+            <div class="faq-question">What happens after my trial is over?</div>
+            <div class="faq-answer">After your trial ends, you can choose to continue with a paid membership to keep learning on Skillshare.</div>
+        </div>
+        <div class="faq-item mt-4">
+            <div class="faq-question">Can I teach on Skillshare?</div>
+            <div class="faq-answer">Yes, Skillshare allows creators and educators to teach classes and share their expertise with learners worldwide.</div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Company Section -->
+            <div class="col-md-3">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">About</a></li>
+                    <li><a href="#" class="text-white">Careers</a></li>
+                    <li><a href="#" class="text-white">Press</a></li>
+                    <li><a href="#" class="text-white">Blog</a></li>
+                    <li><a href="#" class="text-white">Affiliate Program</a></li>
+                    <li><a href="#" class="text-white">Partnerships</a></li>
+                </ul>
+            </div>
+
+            <!-- Community Section -->
+            <div class="col-md-3">
+                <h5>Community</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Team Plans</a></li>
+                    <li><a href="#" class="text-white">Gift Membership Cards</a></li>
+                    <li><a href="#" class="text-white">Corporate Gift Cards</a></li>
+                    <li><a href="#" class="text-white">Scholarships</a></li>
+                </ul>
+            </div>
+
+            <!-- Teaching Section -->
+            <div class="col-md-3">
+                <h5>Teaching</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Become a Teacher</a></li>
+                    <li><a href="#" class="text-white">Teacher Help Center</a></li>
+                    <li><a href="#" class="text-white">Teacher Rules & Requirements</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Section -->
+            <div class="col-md-3">
+                <h5>Mobile</h5>
+                <a href="#" class="d-block mb-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_app_store_badge_EN.svg" alt="App Store" style="width: 120px;">
+                </a>
+                <a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" style="width: 120px;">
+                </a>
+            </div>
+        </div>
+
+        <hr class="bg-light my-4">
+
+        <!-- Bottom Section -->
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left">
+                <p class="mb-0">© StudyNest, 2024</p>
+                <p class="mb-0"><a href="#" class="text-white">Help</a> • <a href="#" class="text-white">Privacy</a> • <a href="#" class="text-white">Terms</a> • <a href="#" class="text-white">Your Privacy Choices</a> • <a href="#" class="text-white">Notice to CA Residents</a></p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fas fa-globe"></i> English</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome for Social Media Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS files/courses.css"> <!-- Link to the custom CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white shadow sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="text-primary font-weight-bold"><a href="/home" class="text-decoration-none text-primary">StudyNest</a></h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
+                    <li class="nav-item"><a href="/courses" class="nav-link text-dark">Courses</a></li>
+                    <li class="nav-item"><a href="/aboutus" class="nav-link text-dark">About Us</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link text-dark">Contact</a></li>
+                    <li class="nav-item"><a href="/login" class="btn btn-outline-primary">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+        <button class="tab-link active" onclick="filterCourses('all')">All Courses</button>
+        <button class="tab-link" onclick="filterCourses('skills')">Skills</button>
+        <button class="tab-link" onclick="filterCourses('admission')">Admission</button>
+        <button class="tab-link" onclick="filterCourses('hsc')">HSC</button>
+        <button class="tab-link" onclick="filterCourses('ssc')">SSC</button>
+    </div>
+
+    <!-- Course Content Sections -->
+    <section id="courses" class="course-category active-category">
+        <h2>All Courses</h2>
+        <div class="courses-grid">
+            <!-- Course Card 1 -->
+            <div class="course-card" data-category="skills">
+                <img src="Courses/Skills/Grapic_Design.jpeg" alt="Graphic Design Course">
+                <div class="course-info">
+                    <h3>Graphic Design for Freelancing</h3>
+                    <p>Md. Kamruzzaman Shishir +1</p>
+                    <div class="course-price">
+                        <span class="price">৳ 2500</span>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Course Card 2 -->
+            <div class="course-card" data-category="skills">
+                <img src="Courses/Skills/images (1).jpeg" alt="Video Editing Course">
+                <div class="course-info">
+                    <h3>Video Editing with Premiere Pro</h3>
+                    <p>James Prince Barai</p>
+                    <div class="course-price">
+                        <span class="price">৳ 1500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="course-card" data-category="skills">
+                <img src="Courses/Skills/Photography-Course.png" alt="Photography Course">
+                <div class="course-info">
+                    <h3>Basic Photography Course</h3>
+                    <p>Prito Reza</p>
+                    <div class="course-price">
+                        <span class="discounted-price">৳ 1950</span>
+                        <span class="original-price">৳ 2500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="course-card" data-category="skills">
+                <img src="Courses/Skills/video making.webp" alt="Video Making Course">
+                <div class="course-info">
+                    <h3>Video Making</h3>
+                    <p>Sadman Sadik +1</p>
+                    <div class="course-price">
+                        <span class="discounted-price">৳ 1950</span>
+                        <span class="original-price"><s>৳ 2500</s></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Admission Course Card -->
+             <!-- Card 1(Engineering) -->
+            <div class="course-card" data-category="admission">
+                <img src="Courses/Academic/engineering-circular.jpg" alt="Engineering & University">
+                <div class="course-info">
+                    <h3>Engineering & University</h3>
+                    <p>৳ 6000</p>
+                </div>
+            </div>
+            <!--  Card 2(University) -->
+            <div class="course-card" data-category="admission">
+                <img src="Courses/Academic/download.png" alt="University Admission">
+                <div class="course-info">
+                    <h3>University Admission</h3>
+                    <p>৳ 5000</p>
+                </div>
+            </div>
+
+
+            <!-- HSC Course Card -->
+             <!-- Card 1 -->
+            <div class="course-card" data-category="hsc">
+                <img src="Courses/Academic/hsc.webp" alt="HSC">
+                <div class="course-info">
+                    <h3>HSC : New Batch</h3>
+                    <p>৳ 5000</p>
+                </div>
+            </div>
+
+
+            <!-- SSC Course Card -->
+             <!-- Card  1-->
+            <div class="course-card" data-category="ssc">
+                <a href="/course-details?courseId=1" style="text-decoration: none; color: inherit;"></a>
+                <img src="Courses/Academic/class9.webp" alt="SSC">
+                <div class="course-info">
+                    <h3>SSC : New Batch</h3>
+                    <p>৳ 5000</p>
+                </div>
+                
+            </div>
+
+            <!-- Card 2 -->
+            <div class="course-card" data-category="ssc">
+                <img src="Courses/Academic/ssc.jpg" alt="SSC">
+                <div class="course-info">
+                    <h3>Class 9 : New Curriculum</h3>
+                    <p>৳ 5000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Filtering -->
+    <script>
+        window.onload = function() {
+            const path = window.location.pathname;
+            if (path.includes("/allcourses")) {
+                filterCourses('all');
+            } else if (path.includes("/skills")) {
+                filterCourses('skills');
+            } else if (path.includes("/admission")) {
+                filterCourses('admission');
+            } else if (path.includes("/hsc")) {
+                filterCourses('hsc');
+            } else if (path.includes("/ssc")) {
+                filterCourses('ssc');
+            }
+        };
+
+        function filterCourses(category) {
+            const courseItems = document.querySelectorAll('.course-card');
+            courseItems.forEach(item => {
+                item.style.display = category === 'all' || item.getAttribute('data-category') === category ? 'block' : 'none';
+            });
+
+            document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.tab-link[onclick="filterCourses('${category}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
