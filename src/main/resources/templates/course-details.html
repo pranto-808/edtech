@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Details</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS files/courseDetails.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/courseDetails.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
@@ -27,224 +27,153 @@
         </div>
     </header>
 
+     <!-- Header Background Section -->
+<div class="header-background">
+    <div class="header-background-overlay"></div>
+    <div class="header-content">
+        <h1 class="course-title">ক্লাস ১০ - SSC '25 বিজ্ঞান</h1>
+        <p class="student-count">ভর্তি হওয়া শিক্ষার্থী: ১১৬৬৯</p>
+    </div>
+</div>
+
+
+    <!-- Main Content -->
     <div class="container my-4">
         <div class="row">
-            <!-- Left Section (Course Details) -->
+            <!-- Left Content -->
             <div class="col-md-8">
-                <div class="course-header">
-                    <div class="course-title-container">
-
-                        <h1 class="course-title">ক্লাস ১০ - SSC '25 বিজ্ঞান</h1>
-                        <p class="student-count">ভর্তি হওয়া শিক্ষার্থী: ৮৬৩৭</p>
-                    </div>
-                </div>
-                <!-- Course Description -->
-                <div class="course-description-container">
-                    <h2 class="description-title">কোর্সটি সম্পর্কে বিস্তারিত</h2>
-                    <p class="course-description">
+                <div class="course-description-card">
+                    <h2>কোর্সটি সম্পর্কে বিস্তারিত</h2>
+                    <p>
                         এই প্রোগ্রামটি কারদের জন্য? <br>
-                        ৯ম শ্রেণির বিজ্ঞান বিভাগের শিক্ষার্থীদের সকল বিষয়ে লাইভ ক্লাস, লাইভ টেস্ট এবং এনিমেটেড ভিডিওর
-                        মাধ্যমে বছরজুড়ে SSC পরীক্ষায় A+ প্রস্তুতি নিশ্চিত করতে এই প্রোগ্রাম।
+                        ৯ম শ্রেণির বিজ্ঞান বিভাগের শিক্ষার্থীদের সকল বিষয়ে লাইভ ক্লাস, লাইভ টেস্ট এবং
+                        এনিমেটেড ভিডিওর মাধ্যমে বছরজুড়ে SSC পরীক্ষায় A+ প্রস্তুতি নিশ্চিত করতে এই প্রোগ্রাম।
                     </p>
-                </div>
-                <!-- Course teacher's information -->
-                <div class="teacher-section">
-                    <h3>Meet Your Teacher</h3>
-                    <div class="teacher-profile">
-                        <img src="path/to/teacher-image.jpg" alt="Teacher Photo" class="teacher-photo">
-                        <div class="teacher-info">
-                            <h4>Daniel Scott</h4>
-                            <p class="teacher-role">Adobe Certified Trainer</p>
-                            <span class="badge">⭐ Top Teacher</span>
-                            <p class="teacher-description">
-                                I'm a Digital Designer & teacher at BYOL international. Sharing is who I am, and
-                                teaching is where I am at my best, because I've been on both sides of that equation, and
-                                getting to deliver useful training is my meaningful way to be a part of the creative
-                                community.
-                                <br><br>
-                                I've spent a long time watching others learn, and teach, to refine how I work with you
-                                to be efficient, useful, and, most importantly, memorable. I want you to carry what I've
-                                shown you into a bright future.
-                                <br><br>
-                                I have a wife (a lovely Irish girl) and kids. I have lived and worked in many places (as
-                                Kiwis tend to do) - but most of my 14+ years of creating and teaching has had one
-                                overriding theme: bringing others along for the ride as we all try to change the world
-                                with our stories, our labours of love and our art.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Requirements Section(section 2) -->
-                <div class="container">
-                    <!-- Requirements Section -->
-                    <div class="section-container">
-                        <h3 class="section-title">ক্লাস করার জন্য প্রয়োজন হবে</h3>
-                        <ul class="requirement-list">
-                            <li>ইন্টারনেট সংযোগ (ওয়াইফাই বা মোবাইল ইন্টারনেট)</li>
-                            <li>স্মার্টফোন অথবা পিসি</li>
-                        </ul>
-                    </div>
-
-                    <!-- Payment Section(section 3) -->
-                    <div class="section-container">
-                        <h3 class="section-title">যেভাবে পেমেন্ট করবেন</h3>
-                        <p class="payment-info">
-                            কীভাবে পেমেন্ট করবেন তা বিস্তারিত জানতে <a href="#">এই ভিডিওটি দেখুন</a>
-                        </p>
-                    </div>
-                    <!-- Class Routine Section (Below left content) -->
-                    <div class="class-routine-section">
-                        <div class="container">
-                            <div class="row align-items-center mb-4">
-                                <div class="col-md-6">
-                                    <h2 class="class-routine-title">ক্লাস রুটিন</h2>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <button class="download-btn">ডাউনলোড করুন</button>
-                                </div>
-                            </div>
-                            <div class="routine-image mb-5">
-                                <img src="Courses/Academic/class routine.jpg" alt="Class Routine" class="img-fluid">
-                            </div>
-                            <div class="contact-info-box p-4">
-                                <h3>যেকোনো প্রয়োজনে কল করুন এখনই</h3>
-                                <p>শিক্ষার কোর্স, তোমার পড়াশোনা, প্রোমো কোড অথবা যেকোনো জিজ্ঞাসায় কল করো</p>
-                                <p><strong>সকাল ৯ টা - রাত ১০ টা</strong></p>
-                                <button class="call-btn">
-                                    <i class="fas fa-phone-alt"></i> 16780
-                                </button>
-                                <p class="note">* যেকোনো নম্বর থেকে সাধারণ কল রেট *</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" class="text-primary">বিস্তারিত দেখুন</a>
                 </div>
 
-                <!-- Right Section (Static Info) -->
-                <div class="col-md-4">
-                    <div class="sticky-box">
-                        <h4>Course Price: ৳ 5000</h4>
-                        <button class="btn btn-primary btn-block mb-3">Enroll Now</button>
+                <div class="course-requirements mt-4">
+                    <h3>ক্লাস করার জন্য প্রয়োজন হবে</h3>
+                    <ul>
+                        <li>ইন্টারনেট সংযোগ (ওয়াইফাই বা মোবাইল ইন্টারনেট)</li>
+                        <li>স্মার্টফোন অথবা পিসি</li>
+                    </ul>
+                </div>
 
-                        <div class="info-section">
-                            <h5>Course Includes</h5>
-                            <ul>
-                                <li>80+ Video Lectures</li>
-                                <li>15+ Practice Tests</li>
-                                <li>Course Notes</li>
-                                <li>Access to Discussion Forum</li>
-                            </ul>
-                        </div>
-
-                        <div class="info-section">
-                            <h5>Course Details</h5>
-                            <ul>
-                                <li>Duration: 6 Months</li>
-                                <li>Language: Bengali</li>
-                                <li>Level: Beginner</li>
-                                <li>Students: 8637</li>
-                            </ul>
-                        </div>
+                <div class="class-routine-section mt-4">
+                    <h3>ক্লাস রুটিন</h3>
+                    <img src="Courses/Academic/class routine.jpg" alt="Class Routine" class="img-fluid mb-3">
+                    <div>
+                        <h4>যেকোনো প্রয়োজনে কল করুন এখনই</h4>
+                        <p>শিক্ষার কোর্স, তোমার পড়াশোনা, প্রোমো কোড অথবা যেকোনো জিজ্ঞাসায় কল করো</p>
+                        <button class="btn btn-primary">16780</button>
+                        <p class="text-muted mt-2">* যেকোনো নম্বর থেকে সাধারণ কল রেট *</p>
                     </div>
+                </div>
+            </div>
+
+
+        <!-- Right Section (Sticky Box) -->
+        <div class="content-right col-md-4">
+            <div class="sticky-box">
+                <h4>Course Price: ৳ 5000</h4>
+                <button class="btn btn-primary btn-block mb-3" onclick="window.location.href='/dashboard.html';">Enroll
+                    Now</button>
+
+                <div class="info-section">
+                    <h5>Course Includes</h5>
+                    <ul>
+                        <li>80+ Video Lectures</li>
+                        <li>15+ Practice Tests</li>
+                        <li>Course Notes</li>
+                        <li>Access to Discussion Forum</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h5>Course Details</h5>
+                    <ul>
+                        <li>Duration: 6 Months</li>
+                        <li>Language: Bengali</li>
+                        <li>Level: Beginner</li>
+                        <li>Students: 11669</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
 
-        <!-- Learn From Anywhere Section -->
-        <div class="learn-anywhere-section">
-            <div class="container text-center">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h2 class="learn-title">Learn From Anywhere</h2>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="learn-description">
-                            Take classes on the go with the <strong>StudyNest app</strong>. Stream or download to watch
-                            on the plane, the subway, or wherever you learn best.
-                        </p>
-                        <div class="app-buttons">
-                            <a href="#" class="app-link">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_app_store_badge_EN.svg"
-                                    alt="App Store" class="app-store-badge">
-                            </a>
-                            <a href="#" class="app-link">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play" class="app-store-badge">
-                            </a>
-                        </div>
-                    </div>
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Section -->
+                <div class="col-md-3">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About</a></li>
+                        <li><a href="#" class="text-white">Careers</a></li>
+                        <li><a href="#" class="text-white">Press</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Affiliate Program</a></li>
+                        <li><a href="#" class="text-white">Partnerships</a></li>
+                    </ul>
+                </div>
+                <!-- Community Section -->
+                <div class="col-md-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Team Plans</a></li>
+                        <li><a href="#" class="text-white">Gift Membership Cards</a></li>
+                        <li><a href="#" class="text-white">Corporate Gift Cards</a></li>
+                        <li><a href="#" class="text-white">Scholarships</a></li>
+                    </ul>
+                </div>
+                <!-- Teaching Section -->
+                <div class="col-md-3">
+                    <h5>Teaching</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Become a Teacher</a></li>
+                        <li><a href="#" class="text-white">Teacher Help Center</a></li>
+                        <li><a href="#" class="text-white">Teacher Rules & Requirements</a></li>
+                    </ul>
+                </div>
+                <!-- Mobile Section -->
+                <div class="col-md-3">
+                    <h5>Mobile</h5>
+                    <a href="#" class="d-block mb-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_app_store_badge_EN.svg"
+                            alt="App Store" style="width: 120px;">
+                    </a>
+                    <a href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Google Play" style="width: 120px;">
+                    </a>
+                </div>
+            </div>
+
+            <hr class="bg-light my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-left">
+                    <p class="mb-0">© StudyNest, 2024</p>
+                    <p class="mb-0"><a href="#" class="text-white">Help</a> • <a href="#" class="text-white">Privacy</a>
+                        • <a href="#" class="text-white">Terms</a> • <a href="#" class="text-white">Your Privacy
+                            Choices</a> • <a href="#" class="text-white">Notice to
+                            CA Residents</a></p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fas fa-globe"></i> English</a>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <!-- Footer Section -->
-        <footer class="bg-dark text-white py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Company Section -->
-                    <div class="col-md-3">
-                        <h5>Company</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">About</a></li>
-                            <li><a href="#" class="text-white">Careers</a></li>
-                            <li><a href="#" class="text-white">Press</a></li>
-                            <li><a href="#" class="text-white">Blog</a></li>
-                            <li><a href="#" class="text-white">Affiliate Program</a></li>
-                            <li><a href="#" class="text-white">Partnerships</a></li>
-                        </ul>
-                    </div>
-                    <!-- Community Section -->
-                    <div class="col-md-3">
-                        <h5>Community</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Team Plans</a></li>
-                            <li><a href="#" class="text-white">Gift Membership Cards</a></li>
-                            <li><a href="#" class="text-white">Corporate Gift Cards</a></li>
-                            <li><a href="#" class="text-white">Scholarships</a></li>
-                        </ul>
-                    </div>
-                    <!-- Teaching Section -->
-                    <div class="col-md-3">
-                        <h5>Teaching</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Become a Teacher</a></li>
-                            <li><a href="#" class="text-white">Teacher Help Center</a></li>
-                            <li><a href="#" class="text-white">Teacher Rules & Requirements</a></li>
-                        </ul>
-                    </div>
-                    <!-- Mobile Section -->
-                    <div class="col-md-3">
-                        <h5>Mobile</h5>
-                        <a href="#" class="d-block mb-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_app_store_badge_EN.svg"
-                                alt="App Store" style="width: 120px;">
-                        </a>
-                        <a href="#">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                alt="Google Play" style="width: 120px;">
-                        </a>
-                    </div>
-                </div>
-
-                <hr class="bg-light my-4">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-left">
-                        <p class="mb-0">© StudyNest, 2024</p>
-                        <p class="mb-0"><a href="#" class="text-white">Help</a> • <a href="#"
-                                class="text-white">Privacy</a> • <a href="#" class="text-white">Terms</a> • <a href="#"
-                                class="text-white">Your Privacy Choices</a> • <a href="#" class="text-white">Notice to
-                                CA Residents</a></p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-right">
-                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-pinterest"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" class="text-white mx-2"><i class="fas fa-globe"></i> English</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
 </body>
 
 </html>

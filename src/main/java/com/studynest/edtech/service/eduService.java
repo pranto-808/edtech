@@ -7,7 +7,7 @@ public interface eduService {
 
     // Method to save a new user or update an existing user in the database
   default void saveUser(eduModel user) {
-          // TODO Auto-generated method stub
+     
           throw new UnsupportedOperationException("Unimplemented method 'saveUser'");
       }
    

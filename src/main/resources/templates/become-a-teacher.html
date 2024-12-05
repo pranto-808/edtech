@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Teacher</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/CSS files/become-a-teacher.css">
+</head>
+
+<body>
+    <header class="bg-white shadow sticky-top">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="text-primary font-weight-bold">
+                <a href="/" class="text-decoration-none text-primary">StudyNest</a>
+            </h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
+                    <li class="nav-item"><a href="/courses" class="nav-link text-dark">Courses</a></li>
+                    <li class="nav-item"><a href="/aboutus" class="nav-link text-dark">About Us</a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link text-dark">Contact</a></li>
+                    <li class="nav-item"><a href="/login" class="btn btn-outline-primary">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Become a Teacher</h2>
+        <form action="/become-a-teacher" method="POST" enctype="multipart/form-data" class="shadow p-4 bg-white rounded">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="expertise">Expertise</label>
+                <textarea id="expertise" name="expertise" class="form-control" rows="4"
+                    placeholder="Mention your areas of expertise" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="uploadResume">Upload Resume</label>
+                <input type="file" id="uploadResume" name="resume" class="form-control-file" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+        
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© StudyNest, 2024. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

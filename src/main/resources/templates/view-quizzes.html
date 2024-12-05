@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Quizzes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">All Quizzes</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Max Marks</th>
+                    <th>Deadline</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="quiz : ${quizzes}">
+                    <td th:text="${quiz.id}"></td>
+                    <td th:text="${quiz.title}"></td>
+                    <td th:text="${quiz.description}"></td>
+                    <td th:text="${quiz.maxMarks}"></td>
+                    <td th:text="${quiz.deadline}"></td>
+                    <td><a th:href="@{'/' + ${quiz.filePath}}" target="_blank">Download</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

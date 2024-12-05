@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Quiz Questions</h2>
+        <form action="/quiz/submit" method="POST" class="mt-4">
+            <!-- Loop through questions dynamically -->
+            <div class="mb-4">
+                <h5>1. What is the capital of France?</h5>
+                <div>
+                    <input type="radio" name="question1" value="A" required> A. Paris<br>
+                    <input type="radio" name="question1" value="B"> B. Berlin<br>
+                    <input type="radio" name="question1" value="C"> C. Rome<br>
+                    <input type="radio" name="question1" value="D"> D. Madrid<br>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5>2. Describe the significance of the French Revolution.</h5>
+                <textarea name="question2" class="form-control" rows="4" placeholder="Enter your answer"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS files/courses.css"> <!-- Link to the custom CSS file -->
@@ -8,11 +9,13 @@
     <title>Courses</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Header Section -->
     <header class="bg-white shadow sticky-top">
         <div class="container d-flex justify-content-between align-items-center py-3">
-            <h1 class="text-primary font-weight-bold"><a href="/home" class="text-decoration-none text-primary">StudyNest</a></h1>
+            <h1 class="text-primary font-weight-bold"><a href="/home"
+                    class="text-decoration-none text-primary">StudyNest</a></h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
@@ -48,7 +51,7 @@
                         <span class="price">৳ 2500</span>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <!-- Course Card 2 -->
             <div class="course-card" data-category="skills">
@@ -90,7 +93,7 @@
 
 
             <!-- Admission Course Card -->
-             <!-- Card 1(Engineering) -->
+            <!-- Card 1(Engineering) -->
             <div class="course-card" data-category="admission">
                 <img src="Courses/Academic/engineering-circular.jpg" alt="Engineering & University">
                 <div class="course-info">
@@ -109,7 +112,7 @@
 
 
             <!-- HSC Course Card -->
-             <!-- Card 1 -->
+            <!-- Card 1 -->
             <div class="course-card" data-category="hsc">
                 <img src="Courses/Academic/hsc.webp" alt="HSC">
                 <div class="course-info">
@@ -120,15 +123,16 @@
 
 
             <!-- SSC Course Card -->
-             <!-- Card  1-->
+            <!-- Card  1-->
             <div class="course-card" data-category="ssc">
-                <a href="/course-details?courseId=1" style="text-decoration: none; color: inherit;"></a>
-                <img src="Courses/Academic/class9.webp" alt="SSC">
-                <div class="course-info">
-                    <h3>SSC : New Batch</h3>
-                    <p>৳ 5000</p>
-                </div>
-                
+                <a href="/course-details?courseId=1" style="text-decoration: none; color: inherit;">
+                    <img src="Courses/Academic/class9.webp" alt="SSC">
+                    <div class="course-info">
+                        <h3>SSC : New Batch</h3>
+                        <p>৳ 5000</p>
+                    </div>
+                </a>
+
             </div>
 
             <!-- Card 2 -->
@@ -144,7 +148,7 @@
 
     <!-- JavaScript for Filtering -->
     <script>
-        window.onload = function() {
+        window.onload = function () {
             const path = window.location.pathname;
             if (path.includes("/allcourses")) {
                 filterCourses('all');
@@ -169,5 +173,15 @@
             document.querySelector(`.tab-link[onclick="filterCourses('${category}')"]`).classList.add('active');
         }
     </script>
+    <!-- Chatbot Section -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "niBUmlYWuZq9Gub0znix_",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="niBUmlYWuZq9Gub0znix_" domain="www.chatbase.co" defer>
+    </script>
 </body>
+
 </html>

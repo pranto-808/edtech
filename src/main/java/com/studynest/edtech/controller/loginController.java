@@ -23,40 +23,41 @@ public class loginController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam("username") String username, 
-                        @RequestParam("password") String password, 
-                        Model model) {
-                            if (eduService.validateUser(username, password)) {
-                                System.out.println("Login successful for user: " + username);
-                                return "redirect:/home"; // Redirect to the home page if validation is successful
-                            }  else {
-                                System.out.println("Login failed for user: " + username);
-                                model.addAttribute("error", "Invalid username or password.");
-                                return "login"; // Stay on the login page if validation fails
-                            }
+    public String login(@RequestParam("username") String username,
+            @RequestParam("password") String password,
+            Model model) {
+        if (eduService.validateUser(username, password)) {
+            System.out.println("Login successful for user: " + username);
+            return "redirect:/home"; // Redirect to the home page if validation is successful
+        } else {
+            System.out.println("Login failed for user: " + username);
+            model.addAttribute("error", "Invalid username or password.");
+            return "login"; // Stay on the login page if validation fails
+        }
     }
 
-   // Show sign-up page (GET method)
-   @GetMapping("/signup")
-   public String showSignUpPage() {
-       return "signup"; // This should map to a `signup.html` template
-   }
+    // Show sign-up page (GET method)
+    @GetMapping("/signup")
+    public String showSignUpPage() {
+        return "signup"; // This should map to a `signup.html` template
+    }
+
     @PostMapping("/signup")
     public String register(@RequestParam("name") String name,
-                            @RequestParam("username") String username, 
-                           @RequestParam("number") String number, 
-                           @RequestParam("email") String email, 
-                           @RequestParam("password") String password, 
-                           Model model) {
+            @RequestParam("username") String username,
+            @RequestParam("number") String number,
+            @RequestParam("email") String email,
+            @RequestParam("password") String password,
+            Model model) {
         eduModel user = new eduModel();
         user.setName(name);
         user.setUsername(username);
         user.setNumber(number);
         user.setEmail(email);
         user.setPassword(password);
-    
+
         eduService.saveUser(user);
-    
+
         model.addAttribute("success", "Registration successful! Please log in.");
         return "redirect:/login";
     }
