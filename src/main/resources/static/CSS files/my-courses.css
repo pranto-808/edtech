@@ -1,0 +1,230 @@
+/* Header Section */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+header h1 a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: capitalize;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+header .btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 5px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+header .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        gap: 1rem;
+    }
+
+    header h1 a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Course Card Styling */
+.course-card {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Course Card Image */
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Course Info */
+.course-info {
+    padding: 20px;
+}
+
+.course-info h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+.course-info p {
+    font-size: 1.2rem;
+    color: #03fc2c;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-card {
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .course-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .course-info p {
+        font-size: 1rem;
+    }
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 5px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.store-img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-bottom ul li a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.footer-bottom ul li a:hover {
+    color: #fff;
+}

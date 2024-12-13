@@ -1,6 +1,11 @@
 package com.studynest.edtech.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
 import java.util.List;
 
 @Entity
@@ -10,17 +15,10 @@ public class quizModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String title;
-
-    @Column(nullable = false)
-    private String description;
-
-    @Column(nullable = false, unique = true)
     private String passcode;
 
-    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<questionModel> questions;
+    @OneToMany(mappedBy = "quiz")
+    private List<questionModel> questions;  // A quiz can have many questions
 
     // Getters and Setters
     public Long getId() {
@@ -29,22 +27,6 @@ public class quizModel {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getPasscode() {
@@ -61,5 +43,21 @@ public class quizModel {
 
     public void setQuestions(List<questionModel> questions) {
         this.questions = questions;
+    }
+
+
+    public void setDescription(String description) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDescription'");
+    }
+
+    public void setTitle(String title) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTitle'");
+    }
+
+    public void setTeacher(teacherModel teacherModel) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTeacher'");
     }
 }

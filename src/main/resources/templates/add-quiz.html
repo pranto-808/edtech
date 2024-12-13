@@ -10,7 +10,7 @@
 <body>
     <div class="container mt-5">
         <h2 class="text-center">Add Quiz</h2>
-        <form action="/quiz/add" method="POST">
+        <form action="/add-quiz" method="POST">
             <!-- Quiz Details -->
             <div class="form-group">
                 <label for="quizTitle">Quiz Title</label>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <button type="button" id="addQuestion" class="btn btn-secondary">Add Another Question</button>
-            <button type="submit" class="btn btn-primary mt-3">Save Quiz</button>
+            <a href="/teacher/dashboard" class="btn btn-primary mt-3">Save Quiz</a>
         </form>
     </div>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -44,4 +44,61 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v10 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="CSS files/font_css/linearicons/style.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="CSS files/signup_css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<img src="CSS files/pictures_css/image-1.png" alt="" class="image-1">
+				<form action="/signup" method="POST">
+                    <h3>New Account?</h3>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-holder">
+                        <span class="lnr lnr-user"></span>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-holder">
+                        <span class="lnr lnr-phone-handset"></span>
+                        <input type="text" class="form-control" name="number" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-holder">
+                        <span class="lnr lnr-envelope"></span>
+                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-holder">
+                        <span class="lnr lnr-lock"></span>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">
+                        <span>Register</span>
+                    </button>
+                </form>
+                
+				<img src="CSS files/pictures_css/image-2.png" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="CSS files/js/jquery-3.3.1.min.js"></script>
+		<script src="CSS files/js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

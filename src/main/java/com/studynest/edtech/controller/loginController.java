@@ -48,6 +48,7 @@ public class loginController {
             @RequestParam("number") String number,
             @RequestParam("email") String email,
             @RequestParam("password") String password,
+            //@RequestParam("confirmPassword") String confirmPassword,
             Model model) {
         eduModel user = new eduModel();
         user.setName(name);
@@ -55,6 +56,7 @@ public class loginController {
         user.setNumber(number);
         user.setEmail(email);
         user.setPassword(password);
+        //user.setConfirmPassword(confirmPassword);
 
         eduService.saveUser(user);
 

@@ -1,6 +1,9 @@
 package com.studynest.edtech.service;
 
 import com.studynest.edtech.model.courseModel;
+
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -16,5 +19,10 @@ public class courseService {
         course.setDescription("This is a sample course description.");
         course.setPrice(5000.0);
         return course;
+    }
+
+    public List<courseModel> getCoursesByUserId(Long userId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCoursesByUserId'");
     }
 }

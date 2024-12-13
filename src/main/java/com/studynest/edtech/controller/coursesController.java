@@ -13,6 +13,10 @@ public class coursesController {
         return "courses"; // Renders the courses.html page
     }
    
+    @GetMapping("/my-courses")
+    public String mycourses() {
+        return "my-courses"; // Renders the courses.html page
+    }
 
     @GetMapping("/courses/allcourses")
     public String allCourses() {

@@ -19,6 +19,7 @@ public class eduModel {
     private String number;
     private String email;
     private String password;
+     
 
     // Getters and setters for all fields
 
@@ -67,4 +68,5 @@ public class eduModel {
     public void setPassword(String password) {
         this.password = password;
     }
+    
 }

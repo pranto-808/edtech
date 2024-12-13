@@ -23,23 +23,23 @@
                     <li class="nav-item"><a href="/contact" class="nav-link text-dark">Contact</a></li>
                     <li class="nav-item"><a href="/login" class="btn btn-outline-primary">Login</a></li>
                 </ul>
+
             </nav>
         </div>
     </header>
 
-     <!-- Header Background Section -->
-<div class="header-background">
-    <div class="header-background-overlay"></div>
-    <div class="header-content">
-        <h1 class="course-title">ক্লাস ১০ - SSC '25 বিজ্ঞান</h1>
-        <p class="student-count">ভর্তি হওয়া শিক্ষার্থী: ১১৬৬৯</p>
+    <!-- Header Background Section -->
+    <div class="header-background">
+        <div class="header-background-overlay"></div>
+        <div class="header-content">
+            <h1 class="course-title">ক্লাস ১০ - SSC '25 বিজ্ঞান</h1>
+            <p class="student-count">ভর্তি হওয়া শিক্ষার্থী: ১১৬৬৯</p>
+        </div>
     </div>
-</div>
-
 
     <!-- Main Content -->
-    <div class="container my-4">
-        <div class="row">
+    <div class="parent-container"> <!-- Main container -->
+        <div class="main-content">
             <!-- Left Content -->
             <div class="col-md-8">
                 <div class="course-description-card">
@@ -52,6 +52,26 @@
                     <a href="#" class="text-primary">বিস্তারিত দেখুন</a>
                 </div>
 
+
+                <!-- Introduce Teacher Section -->
+                <div class="teacher-section mt-5">
+                    <h3 class="section-title">Meet Your Instructor</h3>
+                    <div class="teacher-profile">
+                        <img src="images/teacher-photo.jpg" alt="Teacher Photo" class="teacher-photo">
+                        <div class="teacher-info">
+                            <h4>Dr. Arif Ahmed</h4>
+                            <p class="teacher-role">Lead Physics Instructor</p>
+                            <span class="badge">Ph.D. in Quantum Mechanics</span>
+                            <p class="teacher-description">
+                                Dr. Arif Ahmed has over 15 years of experience teaching physics to high school and
+                                college students.
+                                His engaging style and deep understanding of the subject have helped thousands of
+                                students excel in their studies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="course-requirements mt-4">
                     <h3>ক্লাস করার জন্য প্রয়োজন হবে</h3>
                     <ul>
@@ -59,6 +79,8 @@
                         <li>স্মার্টফোন অথবা পিসি</li>
                     </ul>
                 </div>
+
+
 
                 <div class="class-routine-section mt-4">
                     <h3>ক্লাস রুটিন</h3>
@@ -70,38 +92,63 @@
                         <p class="text-muted mt-2">* যেকোনো নম্বর থেকে সাধারণ কল রেট *</p>
                     </div>
                 </div>
-            </div>
-
-
-        <!-- Right Section (Sticky Box) -->
-        <div class="content-right col-md-4">
-            <div class="sticky-box">
-                <h4>Course Price: ৳ 5000</h4>
-                <button class="btn btn-primary btn-block mb-3" onclick="window.location.href='/dashboard.html';">Enroll
-                    Now</button>
-
-                <div class="info-section">
-                    <h5>Course Includes</h5>
-                    <ul>
-                        <li>80+ Video Lectures</li>
-                        <li>15+ Practice Tests</li>
-                        <li>Course Notes</li>
-                        <li>Access to Discussion Forum</li>
-                    </ul>
+                <div class="reviews-section mt-5">
+                    <h3 class="section-title">Student Reviews</h3>
+                    <div class="review">
+                        <p>"This course completely changed the way I approach physics. Dr. Arif's teaching style is
+                            phenomenal!"</p>
+                        <span>- Sarah Khan, Former Student</span>
+                    </div>
+                    <div class="review">
+                        <p>"Engaging, insightful, and practical! Highly recommended for anyone serious about mastering
+                            physics."</p>
+                        <span>- Muhammad Ali, College Student</span>
+                    </div>
                 </div>
 
-                <div class="info-section">
-                    <h5>Course Details</h5>
+                <div class="course-highlights mt-5">
+                    <h3 class="section-title">Course Highlights</h3>
                     <ul>
-                        <li>Duration: 6 Months</li>
-                        <li>Language: Bengali</li>
-                        <li>Level: Beginner</li>
-                        <li>Students: 11669</li>
+                        <li>Comprehensive video lectures covering every topic in detail.</li>
+                        <li>Interactive quizzes and assignments to test your understanding.</li>
+                        <li>Access to downloadable study materials and cheat sheets.</li>
+                        <li>Regular live Q&A sessions with the instructor.</li>
                     </ul>
                 </div>
             </div>
+
+
+            <!-- Right Section (Sticky Box) -->
+            <div class="content-right col-md-4">
+                    <div class="sticky-box">
+                        <h4>Course Price: ৳ 5000</h4>
+                        <button class="btn btn-primary btn-block mb-3"
+                            onclick="window.location.href='/dashboard.html';">Enroll Now</button>
+    
+                        <div class="info-section">
+                            <h5>Course Includes</h5>
+                            <ul>
+                                <li>80+ Video Lectures</li>
+                                <li>15+ Practice Tests</li>
+                                <li>Course Notes</li>
+                                <li>Access to Discussion Forum</li>
+                            </ul>
+                        </div>
+    
+                        <div class="info-section">
+                            <h5>Course Details</h5>
+                            <ul>
+                                <li>Duration: 6 Months</li>
+                                <li>Language: Bengali</li>
+                                <li>Level: Beginner</li>
+                                <li>Students: 11669</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
     </div>
 
     <!-- Footer Section -->

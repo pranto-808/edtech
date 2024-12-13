@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - StudyNest</title>
+    <link rel="stylesheet" href="/css/teacher-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>StudyNest</h1>
+        </div>
+        <nav class="navbar">
+            <a href="#performance">Performance</a>
+            <a href="#quizzes">Quizzes</a>
+            <a href="#notifications">Notifications</a>
+            <a href="#messages">Messages</a>
+        </nav>
+        <button id="darkModeToggle" class="btn">Dark Mode</button>
+    </header>
+
+    <main class="dashboard">
+        <!-- Profile Section -->
+        <section class="profile-card">
+            <img src="teacher.jpg" alt="Teacher Profile" class="profile-pic">
+            <h2>Welcome, Dr. James Amin</h2>
+            <p>Subject: Physics</p>
+            <a href="#profile" class="btn">View Profile</a>
+        </section>
+
+        <!-- Student Performance Section -->
+        <section id="performance" class="section">
+            <h2>Student Performance</h2>
+            <div class="filters">
+                <label for="filterSubject">Subject:</label>
+                <select id="filterSubject">
+                    <option value="all">All Subjects</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                </select>
+
+                <label for="filterDate">Date Range:</label>
+                <input type="date" id="filterStart"> to 
+                <input type="date" id="filterEnd">
+            </div>
+            <canvas id="performanceBarChart"></canvas>
+            <canvas id="performancePieChart"></canvas>
+        </section>
+
+        <!-- Quizzes Section -->
+        <section id="quizzes" class="section">
+            <h2>Quizzes</h2>
+            <button class="btn" onclick="window.location.href='/set-quiz'">Set Quiz</button>
+            <table class="quizzes-table">
+                <thead>
+                    <tr>
+                        <th>Quiz Title</th>
+                        <th>Status</th>
+                        <th>Attempts</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math Quiz</td>
+                        <td>Active</td>
+                        <td>12</td>
+                        <td><button class="btn">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Science Quiz</td>
+                        <td>Closed</td>
+                        <td>18</td>
+                        <td><button class="btn">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Gamification Section -->
+        <section id="gamification" class="section">
+            <h2>Achievements</h2>
+            <ul class="achievement-list">
+                <li><span>🏅</span> Quiz Master: Created 10+ quizzes.</li>
+                <li><span>📈</span> Top Educator: Improved student performance by 20%.</li>
+                <li><span>🎯</span> Engager: 50+ students participated in your quizzes.</li>
+            </ul>
+        </section>
+
+        <!-- Notifications Section -->
+        <section id="notifications" class="section">
+            <h2>Notifications</h2>
+            <ul class="notification-list">
+                <li>New quiz submission from Student A.</li>
+                <li>Quiz results published for Science Quiz.</li>
+                <li>Platform update scheduled for next week.</li>
+            </ul>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages" class="section">
+            <h2>Messages</h2>
+            <p>You have <strong>3 unread messages</strong>.</p>
+            <a href="#messages" class="btn">Go to Messages</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 StudyNest. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Chart.js for Bar and Pie Charts
+        const barCtx = document.getElementById('performanceBarChart').getContext('2d');
+        const pieCtx = document.getElementById('performancePieChart').getContext('2d');
+
+        // Bar Chart for Student Scores
+        const barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Student A', 'Student B', 'Student C', 'Student D'],
+                datasets: [{
+                    label: 'Average Score',
+                    data: [85, 72, 90, 78],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Pie Chart for Performance Distribution
+        const pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Excellent', 'Good', 'Average', 'Below Average'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#FF5722', '#F44336']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
