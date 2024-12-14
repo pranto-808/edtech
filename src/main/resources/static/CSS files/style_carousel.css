@@ -48,6 +48,69 @@ html {
     animation: scroll 30s linear infinite;
 }
 
+
+/*section for three parts*/
+
+.features-section {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 3rem 0;
+}
+
+.features-section .container {
+    max-width: 1200px;
+}
+
+.features-section .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features-section .card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.features-section .card-body {
+    padding: 1.5rem;
+}
+
+.features-section .feature-icon img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.features-section .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107; /* Bootstrap's warning color */
+    margin-bottom: 1rem;
+}
+
+.features-section .card-text {
+    font-size: 1rem;
+    color: #6c757d; /* Bootstrap's muted text color */
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .features-section .card {
+        margin-bottom: 2rem;
+    }
+
+    .features-section .card-title {
+        font-size: 1.25rem;
+    }
+
+    .features-section .card-text {
+        font-size: 0.95rem;
+    }
+}
+
+
 /* Secondary and Higher Secondary course section */
 
 .program-section {

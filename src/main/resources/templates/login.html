@@ -44,10 +44,11 @@
                 <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
                 <h1 class="opacity">LOGIN</h1>
                 <form action="/login" method="post">
-                    <input type="text" placeholder="USERNAME" />
-                    <input type="password" placeholder="PASSWORD" />
-                    <button class="opacity">SUBMIT</button>
+                    <input type="text" name="username" placeholder="USERNAME" required />
+                    <input type="password" name="password" placeholder="PASSWORD" required />
+                    <button type="submit" class="opacity">SUBMIT</button>
                 </form>
+                
                 <div class="register-forget opacity">
                     <a href="/signup">REGISTER</a>
                     <a href="#">FORGOT PASSWORD</a>
